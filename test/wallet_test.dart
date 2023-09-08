@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() async {
   group('wallet feature tests for functions', () async {
-    var wallet = Wallet(0);
+    var wallet = Wallet(0,"0",0,"0");
     test('wallet creation function', () async {
       // returns the current balance
       expect(wallet.getBalance, 0);
