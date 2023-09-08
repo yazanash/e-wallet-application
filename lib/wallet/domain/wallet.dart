@@ -1,6 +1,10 @@
 class Wallet {
+  final String name;
+  final int id;
+  final String type;
+
   double _balance = 0.0;
-  Wallet(double? balance) {
+  Wallet(double? balance, this.name, this.id, this.type) {
     if (balance != null) {
       _balance = balance;
     }
@@ -15,6 +19,6 @@ class Wallet {
   }
 
   factory Wallet.fromJson(Map<String, dynamic> json) {
-    return Wallet(json['balance']);
+    return Wallet(json['balance'],json['balance'],json['balance'],json['balance']);
   }
 }
