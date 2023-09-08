@@ -1,6 +1,6 @@
 class Wallet {
   final String name;
-  final int id;
+  final int? id;
   final String type;
 
   double _balance = 0.0;
@@ -18,7 +18,15 @@ class Wallet {
     _balance -= debt;
   }
 
-  factory Wallet.fromJson(Map<String, dynamic> json) {
-    return Wallet(json['balance'],json['balance'],json['balance'],json['balance']);
+  factory Wallet.fromJson(Map<dynamic, dynamic> json) {
+    return Wallet(json['balance'], json['name'], json['id'], json['type']);
+  }
+  Map<dynamic, dynamic> toJson() {
+    return {
+      id: id,
+      'balance': _balance,
+      'name': name,
+      'type': type,
+    };
   }
 }

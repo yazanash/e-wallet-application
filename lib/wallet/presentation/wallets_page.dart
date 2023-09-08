@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class WalletsPage extends StatelessWidget {
   const WalletsPage({Key? key}) : super(key: key);
@@ -12,6 +10,10 @@ class WalletsPage extends StatelessWidget {
         title: Text('My Wallets'),
       ),
       body: Container(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add_card),
+      ),
     );
   }
 }
